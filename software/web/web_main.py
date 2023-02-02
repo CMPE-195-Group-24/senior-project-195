@@ -264,7 +264,7 @@ def edit_user():
             user_info_original_roles = func.dbroles_to_listroles(user_info.roles)
             pending_roles += "{};".format(user_info_original_roles[-1])
         user_info.first_name = request.form["firstname"]
-        user_info.lastname = request.form["lastname"]
+        user_info.last_name = request.form["lastname"]
         user_info.roles = pending_roles
         is_checked = request.form.get("active")
         user_info.active = True if is_checked else False
