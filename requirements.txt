@@ -1,3 +1,5 @@
 paramiko
 flask
 flask-sqlalchemy
+requests
+flask_mysqldb

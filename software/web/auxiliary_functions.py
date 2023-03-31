@@ -27,7 +27,7 @@ def send_password_email(email, password):
     Email: {email}
     Password: {password}
     
-    Go to http://127.0.0.1:5000/login
+    Go to http://127.0.0.1:80/login
     """
     msg.set_content(message)
 

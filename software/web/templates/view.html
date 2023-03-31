@@ -31,23 +31,21 @@
                 <th>Roles</th>
                 <th>Password</th>
                 <th>Active Status</th>
-                <th>IP Addresses</th>
         </thead>
         <tbody>
         {% for item in values %}
             <tr>
-                <td>{{item.id}}</td>
-                <td>{{item.user}}</td>
-                <td>{{item.email}}</td>
-                <td>{{item.first_name}}</td>
-                <td>{{item.last_name}}</td>
-                <td>{% for role in item.roles.split(";") %}<div><code>{{role}}</code></div>{% endfor %}</td>
-                <td>{{item.password}}</td>
-                <td>{{item.active}}</td>
-                <td>{% for ip in item.ip.split(";") %}<code>{{ip}}</code><br/>{% endfor %}</td>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                <td></td>
+                <td>{{item[5]}}</td>
+                <td>{% if item[8] == 1 %}&#9989;{% else %}&#10060;{% endif %}</td>
                 <td style="text-align: center;">
                     <form method="post" action="#">
-                        <input style="display: none;" type="text" name="edit_user" value={{item.id}}>
+                        <input style="display: none;" type="text" name="edit_user" value={{item[0]}}>
                         <button class="btn btn-secondary" type="submit">Edit</button>
                     </form>
                 </td>
