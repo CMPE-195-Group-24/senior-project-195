@@ -14,29 +14,50 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
+    {% if ever_admin == 1 %}
+    <div style="background-color: #1E90FF70; text-align: center;"><img style="vertical-align: middle;" src="static/pictures/Warning Icon.png" height="18px" width="18px"/> User was previously <code>sysop</code> and <b><u>cannot be deleted</u></b>. Contact <code>root</code> user.</div>
+    {% endif %}
     <form action="#" method="post" style="text-align: center">
         <center>
-            <table class="outer-border-remove force-border-remove edit-user-table" style="width: 75%">
-                <td style="width: 50%">
-                    <p><span style="font-size: 14pt;"><u>User Information</u></span></p>
-                    <p>ID <span style="color: red">*</span><br/><input style="width: 75%; text-align: center;" type="text" name="id" value="{{id}}" disabled></p>
-                    <p>Username <span style="color: red">*</span><br/><input style="width: 75%; text-align: center;" type="text" name="username" placeholder="Username" value="{{username}}" disabled></p>
-                    <p>Email <span style="color: red">*</span><br/><input style="width: 75%; text-align: center;" type="email" name="email" placeholder="Email" value="{{email}}" disabled></p>
-                    <p>First Name <span style="color: red">*</span><br/><input style="width: 75%; text-align: center;" type="text" name="firstname" placeholder="First Name" value="{{firstname}}"></p>
-                    <p>Last Name <span style="color: red">*</span><br/><input style="width: 75%; text-align: center;" type="text" name="lastname" placeholder="Last Name" value="{{lastname}}"></p>
-                </td>
-                <td>
-                    <p><span style="font-size: 14pt;"><u>Status</u></span></p>
-                    <p><input type="checkbox" name="active" value="active" {{"checked" if is_active}}>&emsp;ACTIVE</p>
-                    <hr style="border-top: 1px solid white;"/>
-                    <p><span style="font-size: 14pt;"><u>Roles</u></span></p>
-                {% for role in roles %}
-                    <p><input type="checkbox" name={{role}} value={{role}} {{"checked" if role in is_enabled_roles}}>&emsp;{{role}}</p>
-                {% endfor %}
-                </td>
+            <table class="outer-border-remove force-border-remove edit-user-table" style="width: 50%; margin: 1em;">
+                <tr>
+                    <td style="width: 50%; border-bottom: 0;" rowspan="2">
+                        <p><span style="font-size: 14pt;"><u>User Information</u></span></p>
+                        <p>ID <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="id" value="{{id}}" disabled></p>
+                        <p>Username <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="username" placeholder="Username" value="{{username}}" disabled></p>
+                        <p>Email <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="email" name="email" placeholder="Email" value="{{email}}" disabled></p>
+                        <p>First Name <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="firstname" placeholder="First Name" value="{{firstname}}" autocomplete="off"></p>
+                        <p>Last Name <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="lastname" placeholder="Last Name" value="{{lastname}}" autocomplete="off"></p>
+                    </td>
+                    <td>
+                        <p><span style="font-size: 14pt;"><u>Status</u></span></p>
+                        <p><input type="checkbox" name="active" value="active" {{"checked" if is_active}}>&emsp;ACTIVE</p>
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+                        <p><span style="font-size: 14pt;"><u>Roles</u></span></p>
+                        {% for role in roles %}
+                        <p><input type="checkbox" name={{role}} value={{role}} {{"checked" if role in is_enabled_roles}}>&emsp;{{role}}</p>
+                        {% endfor %}
+                        </td>
+                    </tr>
+                </tr>
             </table>
         </center>
-        <button class="btn btn-success" type="submit">Confirm Edit</button>
+        <button class="btn btn-success" style="margin-bottom: 0.5em;" type="submit">Confirm Edit</button>
     </form>
+    <div>
+        <center>
+            <form method="post" action="#">
+                <input style="display: none;" type="text" name="assign_new_uuid" value="{{id}}">
+                <button class="btn btn-sm btn-secondary" style="margin-bottom: 0.5em;" type="submit">Assign New UUID</button>
+            </form>
+            <form method="post" action="#">
+                <input style="display: none;" type="text" name="remove_uuid" value="{{id}}">
+                <button class="btn btn-sm btn-danger" type="submit">Remove UUID</button>
+            </form>
+        </center>
+    </div>
 </body>
 {% endblock %}

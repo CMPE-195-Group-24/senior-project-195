@@ -57,7 +57,7 @@ class Database:
                 LAST_NAME CHAR(100),
                 PASSWORD CHAR(100),
                 ROLES CHAR(100),
-                IP CHAR(100),
+                EVER_ADMIN BOOL,
                 ACTIVE BOOL NOT NULL
                 )'''
         self.cursor.execute(sql)

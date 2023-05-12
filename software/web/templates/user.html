@@ -18,10 +18,10 @@
     {% endwith %}
 
     <div style="border: 2px white solid; width: auto; margin: 0.5em 0; padding: 0.25em;">
-        <span style="font-size:14pt;"><u>My Information</u></span><br/>Username: {{user}}<br/>Email: {{email}}<br/>ID: #{{id}}<br/>Roles: {{roles}}</div>
+        <span style="font-size:14pt;"><u>My Information</u></span><br/>Full Name: {{first_name}} {{last_name}}<br/>Username: {{user}}<br/>Email: {{email}}<br/>ID: #{{id}}<br/>Roles: {{roles}}</div>
     </div>
-    <form action="reset-password">
-        <p><button class="btn btn-danger" type="submit">Reset Password</button></p>
+    <form action="change-password">
+        <p><button class="btn btn-danger" type="submit">Change Password</button></p>
     </form>
     <!-- <form action="#" method="post">
         <input type="email" name="email" placeholder="Enter Email" value="{{email if email}}">

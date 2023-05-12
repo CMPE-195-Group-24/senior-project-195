@@ -5,7 +5,7 @@
 {% block content %}
 <head>
     <title>Admin - Database View</title>
-    <link rel="shortcut icon" type="image/png" href="static\pictures\SUS-Logo-Fav4.png">
+    <link rel="shortcut icon" type="image/png" href="software\web\static\pictures\WoTak Reader Logo.png">
 </head>
 
 <body>
@@ -18,40 +18,54 @@
     {% endwith %}
     <a style="float: left;" href="add-user"><button class="btn btn-primary" name="add_user" type="submit">Add User</button></a>
     <form action="#" method="post">
-        <p style="text-align: right;"><input style="width: 25%;" type="text" name="search" placeholder="Search" value="{{search_text if search_text}}"></p>
+        <p style="text-align: right;"><input class="form-control form-control-sm" style="width: 25%;" type="text" name="search" placeholder="Search" value="{{search_text if search_text}}"></p>
     </form>
-    <table style="width: 100%">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Roles</th>
-                <th>Password</th>
-                <th>Active Status</th>
-        </thead>
-        <tbody>
-        {% for item in values %}
-            <tr>
-                <td>{{item[0]}}</td>
-                <td>{{item[1]}}</td>
-                <td>{{item[2]}}</td>
-                <td>{{item[3]}}</td>
-                <td>{{item[4]}}</td>
-                <td></td>
-                <td>{{item[5]}}</td>
-                <td>{% if item[8] == 1 %}&#9989;{% else %}&#10060;{% endif %}</td>
-                <td style="text-align: center;">
-                    <form method="post" action="#">
-                        <input style="display: none;" type="text" name="edit_user" value={{item[0]}}>
-                        <button class="btn btn-secondary" type="submit">Edit</button>
-                    </form>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <center>
+        <table style="display: inline-table;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>UUID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Roles</th>
+                    <!--<th>Password</th>-->
+                    <th>Active Status</th>
+                    <th>Edit?</th>
+                    <th>Delete?</th>
+            </thead>
+            <tbody>
+            {% for item in values %}
+                <tr>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[9]}}</td>
+                    <td>{{item[1]}}</td>
+                    <td>{{item[2]}}</td>
+                    <td>{{item[3]}}</td>
+                    <td>{{item[4]}}</td>
+                    <td>{% for role in item[6].split(";") %}<div><code>{{role}}</code></div>{% endfor %}</td>
+                    <!-- <td>{{item[5]}}</td> -->
+                    <td><center>{% if item[8] == 1 %}&#9989;{% else %}&#10060;{% endif %}</center></td>
+                    <td style="text-align: center;">
+                        <form method="post" action="#">
+                            <input style="display: none;" type="text" name="edit_user" value={{item[0]}}>
+                            <button class="btn btn-secondary" type="submit">Edit</button>
+                        </form>
+                    </td>
+                    <td style="text-align: center;">
+                        {% if (item[7] == 0 or is_root) and "root" not in item[6] %}
+                        <form method="post" action="#">
+                            <input style="display: none;" type="text" name="remove_user" value={{item[0]}}>
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </center>
 </body>
 {% endblock %}

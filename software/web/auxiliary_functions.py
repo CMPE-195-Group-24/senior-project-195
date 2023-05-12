@@ -9,6 +9,21 @@ import secrets
 import hashlib
 import re
 from requests import get
+import pytz
+import yaml
+import os
+
+def database_info(file="database_config.yaml"):
+    with open(file, "r") as yaml_file:
+        try:
+            file_content = yaml.safe_load(yaml_file)
+            return file_content
+        except yaml.YAMLError as exc:
+            print(exc)
+
+def get_current_time_iso(timezone: str='UTC') -> str:
+    timezone = pytz.timezone(timezone)
+    return datetime.now(timezone).isoformat()
 
 def send_password_email(email, password):
     # set your email and password
@@ -27,7 +42,7 @@ def send_password_email(email, password):
     Email: {email}
     Password: {password}
     
-    Go to http://127.0.0.1:80/login
+    Go to http://54.215.119.184/login
     """
     msg.set_content(message)
 
@@ -36,13 +51,13 @@ def send_password_email(email, password):
         smtp.login(from_email_address, from_email_password)
         smtp.send_message(msg)
 
-def password_generator():
+def password_generator() -> str:
     length = 20
     password: str = ""
     lower_letters = string.ascii_lowercase
     upper_letters = string.ascii_uppercase
     numbers = string.digits
-    symbols = string.punctuation
+    symbols = "$&#!"
 
     all = lower_letters + upper_letters + numbers + symbols
 
@@ -52,10 +67,31 @@ def password_generator():
             password += "".join(secrets.choice(all))
         if (any(char in lower_letters for char in password) and
             any(char in upper_letters for char in password) and
-            sum(char in symbols for char in password) > 2 and
-            sum(char in numbers for char in password) > 2):
+            sum(char in symbols for char in password) >= 2 and
+            sum(char in numbers for char in password) >= 2):
             break
     return password
+
+def password_change_check(password: str):
+    lower_letters = string.ascii_lowercase
+    upper_letters = string.ascii_uppercase
+    numbers = string.digits
+    invalid_spec_char = "%'()*+,-./:;<=>?@[\]^_`{|}~"
+    symbols = "$&#!"
+    
+    if re.search(r"\s", password) is not None:
+        return False, "Password contains whitespace(s)."
+
+    if (len(password) >= 8 and
+        any(char in lower_letters for char in password) and
+        any(char in upper_letters for char in password) and
+        not any(char in invalid_spec_char for char in password) and
+        sum(char in symbols for char in password) >= 2 and
+        sum(char in numbers for char in password) >= 2):
+        return True, None
+    else:
+        return False, "Password does not meet requirements."
+
 
 def dbroles_to_listroles(roles: str) -> list:
     list_roles = roles.split(";")[:-1]

@@ -47,6 +47,10 @@ body {
     overflow: hidden;
 }
 
+.h1, h1 {
+    font-size: 24pt !important;
+}
+
 .highlight {
     background-color: rgba(160, 234, 240, 0.8);
     color: black;
@@ -121,6 +125,14 @@ table input {
     text-align: center;
 }
 
+.form-control {
+    display: unset !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #a7a7a7 !important;
+}
 
 
 
@@ -221,9 +233,6 @@ It will look normal on 1080p, 1440p, and 4k monitors */
         text-align: center;
         text-transform: uppercase;
         padding: 8px;
-        
-
-        
     }
     
     .style-nav ul li:hover {
@@ -248,49 +257,7 @@ It will look normal on 1080p, 1440p, and 4k monitors */
         display: none !important;
     }
 
-    .calendar-class{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Quicksand", sans-serif;
-    }
-    .calendar{
-        width: 45rem;
-        height: 56rem;
-        background-color: #1b1a1a;
-        box-shadow: 0 0.5rem 3rem rgba(0,0,0,4);
-       
-    }
-    .reminders h2{
-        text-decoration: underline;
-        text-transform: uppercase;
-        margin-left: 36%;
-        margin-top: 10%;
-        margin-bottom: 65%;
-    }
-    .reminders section{
-        margin-left: 0%;
-        margin-top: -63%;
-        margin-bottom: 65%;
-    }
-    .days{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        padding: .2rem;
-        text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
-    }
-    .days div{
-        font-size: 1.4rem;
-        margin: .275rem;
-        width: calc(40.2rem/7);
-        height: 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
-        transition: background-color 0.2s;
-    }
+    
 }
 
 /**************** 3b) SPECIFIC MOBILE VIEW CONFIGURATIONS ****************/

@@ -15,9 +15,8 @@
         {% endif %}
     {% endwith %}
 <form action="#" method="post" style="text-align: center">
-    <!-- <p><input type="text" name="username" placeholder="Username" value="{{user if user}}"></p> -->
-    <p>Email<br/><input style="width: 25%;" type="email" name="email" placeholder="Email" value="{{email if email}}"></p>
-    <p>Password<br/><input style="width: 25%;" type="password" name="password" placeholder="Password" value="{{password if password}}"></p>
+    <p>Email<br/><input class="form-control form-control-sm" style="width: 25%;" type="email" name="email" placeholder="Email" value="{{email if email}}"></p>
+    <p>Password<br/><input class="form-control form-control-sm" style="width: 25%;" type="password" name="password" placeholder="Password" value="{{password if password}}"></p>
     <p><button class="btn btn-success" type="submit">Log In</button></p>
 </form>
     <center><p><a href="signup"><button class="btn btn-primary" type="submit">Sign Up</button></a></p></center>

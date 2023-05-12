@@ -39,18 +39,18 @@
         <div class="desktop">
             <div style="border-bottom: 2px solid white">
                 <nav class="navbar navbar-expand-lg navbar-light bg-custom">
-                    <a class="navbar-brand" href="home"><img class="logo" src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png" alt=""></a>  <!-- Favicon -->
+                    <a class="navbar-brand" href="home"><img class="logo" src="static/pictures/WoTak Reader Logo.png" alt=""></a>  <!-- Favicon -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
+                            <!--
                             <li class="nav-item">
                                 <a class="nav-link" href="home">Home<span class="sr-only">(current)</span></a>
                             </li>
-                            <!--
-                                <li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Tools
                                 </a>
@@ -66,12 +66,21 @@
                             
                             -->
                             <li class="nav-item">
-                                <a class="nav-link" href="view" aria-disabled="false">All Users</a>
+                                <a class="nav-link" href="view" aria-disabled="false">Personnels</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Audit Logs
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link" href="audit-database">Database</a>
+                                    <a class="nav-link" href="audit-access">Door Access</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="justify-content-between form-inline">
-                        <span style="color: white; margin-right: 1em;">Hello, {{user if user else "user"}}!</span>
+                        <span style="color: white; margin-right: 1em;">Hello, <i>{{user if user else "user"}}</i>!</span>
                         {% if user %}
                         <form action="user">
                             <button class="btn btn-primary" style="margin-right: 1em;" type="submit">My User Profile</button>

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %} Audit Log: Database {% endblock %}
+
+{% block content %}
+<head>
+    <title>Audit Log: Database</title>
+</head>
+
+<body>
+    <center>
+        <table>
+            <thead>
+                <th><center>Timestamp</center></th>
+                <th><center>Action</center></th>
+                <th><center>Targetted User</center></th>
+                <th><center>Data Changed</center></th>
+                <th><center>Old Content</center></th>
+                <th><center>New Content</center></th>
+                <th><center>Performed By User</center></th>
+            </thead>
+            <tbody>
+                {% for log in audit_log %}
+                {% if log[1] == "DELETE" %}
+                <tr style="background-color: #FA807270;">
+                    <td>{{log[0]}}</td>
+                    <td>{{log[1]}}</td>
+                    <td><center>{{log[2]}}</center></td>
+                    <td><center>{{log[3]}}</center></td>
+                    <td>{{log[4]}}</td>
+                    <td>{{log[5]}}</td>
+                    <td><center>{{log[6]}}</center></td>
+                </tr>
+                {% elif log[1] == "UPDATE" %}
+                <tr style="background-color: #1E90FF50">
+                    <td>{{log[0]}}</td>
+                    <td>{{log[1]}}</td>
+                    <td><center>{{log[2]}}</center></td>
+                    <td><center>{{log[3]}}</center></td>
+                    <td>{% if log[3] == "PASSWORD" %}[redacted]{% else %}{{log[4]}}{% endif %}</td>
+                    <td>{% if log[3] == "PASSWORD" %}[redacted]{% else %}{{log[5]}}{% endif %}</td>
+                    <td><center>{{log[6]}}</center></td>
+                </tr>
+                {% elif log[1] == "INSERT" %}
+                <tr style="background-color: #32CD3250">
+                    <td>{{log[0]}}</td>
+                    <td>{{log[1]}}</td>
+                    <td><center>{{log[2]}}</center></td>
+                    <td><center>{{log[3]}}</center></td>
+                    <td>{{log[4]}}</td>
+                    <td>{% for column in log[5].split('\n') %}<div>{{column}}</div>{% endfor %}</td>
+                    <td><center>{{log[6]}}</center></td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td>{{log[0]}}</td>
+                    <td>{{log[1]}}</td>
+                    <td><center>{{log[2]}}</center></td>
+                    <td><center>{{log[3]}}</center></td>
+                    <td>{{log[4]}}</td>
+                    <td>{{log[5]}}</td>
+                    <td><center>{{log[6]}}</center></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+</body>
+{% endblock %}
