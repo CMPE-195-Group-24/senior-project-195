@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>9B754F4RK8.SJSU.NFCReaderUITests.xctrunner</string>
+	<key>com.apple.security.get-task-allow</key>
+	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>9B754F4RK8.SJSU.NFCReaderUITests.xctrunner</string>
+	</array>
+</dict>
+</plist>

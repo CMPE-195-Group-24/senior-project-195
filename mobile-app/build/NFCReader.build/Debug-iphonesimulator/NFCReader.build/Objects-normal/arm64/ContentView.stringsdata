@@ -1,0 +1,16 @@
+{
+  "source": "/Users/blakehuynh/Documents/IOS App Test/NFCReader/NFCReader/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Enter URL"
+      },
+      {
+        "comment": "",
+        "key": "Write to Tag"
+      }
+    ]
+  },
+  "version": 1
+}
