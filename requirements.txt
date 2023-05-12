@@ -1,0 +1,9 @@
+paramiko
+flask
+flask-sqlalchemy
+requests
+flask_mysqldb
+mysql.connector
+cursor
+pytz
+datetime

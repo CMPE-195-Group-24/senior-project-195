@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %} Add User {% endblock %}
+
+{% block content %}
+<head>
+    <title>Admin - Add User</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="flash-notif">{{msg}}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="#" method="post" style="text-align: center">
+        <center>
+            <table class="outer-border-remove force-border-remove edit-user-table" style="width: 75%">
+                <td style="width: 50%">
+                    <p><span style="font-size: 14pt;"><u>User Information</u></span></p>
+                    <p>ID <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="id" value="{{next_id}}" autocomplete="off" disabled></p>
+                    <p>Username <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="username" placeholder="Username" value="{{username if user}}" autocomplete="off"></p>
+                    <p>Email <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="email" name="email" placeholder="Email" value="{{email if email}}" autocomplete="off"></p>
+                    <p>First Name <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="firstname" placeholder="First Name" value="{{first_name if first_name}}" autocomplete="off"></p>
+                    <p>Last Name <span style="color: red">*</span><br/><input class="form-control form-control-sm" style="width: 75%; text-align: center;" type="text" name="lastname" placeholder="Last Name" value="{{last_name if last_name}}" autocomplete="off"></p>
+                </td>
+                <td>
+                    <p><span style="font-size: 14pt;"><u>Status</u></span></p>
+                    <p><input type="checkbox" name="active" value="active">&emsp;ACTIVE</p>
+                    <hr style="border-top: 1px solid white;"/>
+                    <p><span style="font-size: 14pt;"><u>Roles</u></span></p>
+                    {% for role in can_edit_roles %}
+                    <p><input type="checkbox" name={{role}} value={{role}}>&emsp;{{role}}</p>
+                    {% endfor %}
+                </td>
+            </table>
+            <p><button class="btn btn-success" type="submit">Add User</button></p>
+        </center>
+    </form>
+</body>
+{% endblock %}
