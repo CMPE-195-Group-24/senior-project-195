@@ -36,7 +36,7 @@ def get_current_time_iso(timezone: str = 'UTC') -> str:
     timezone1 = pytz.timezone(timezone)
     return datetime.now(timezone1).isoformat()
 
-# Pin Assignments
+# Pin Assignments 
 power_pin = 25
 servo_pin = 12
 
@@ -49,7 +49,6 @@ GPIO.setup(power_pin, GPIO.OUT)
 GPIO.output(power_pin, GPIO.HIGH)
 
 # initialize GPIO pin for servo control pin
-GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo_pin, GPIO.OUT)
 pwm = GPIO.PWM(servo_pin, 50)
 
@@ -138,6 +137,9 @@ while True:
                 # if no instance of UUID in the database was found...
                 if row is None:
                     print('DOOR LOCKED: No UUID found in database.')
+                    cursor.execute(f"""INSERT INTO SJSU.AUDIT_ACCESS (TIMESTAMP, SERIAL_NUMBER, READER_NAME, USER_ID, DECISION, REASON) VALUES
+                                        ("{get_current_time_iso().split('.')[0] + 'Z'}", {serial_number}, "FRONT_DOOR", "{user_id}", 0, "User is not an active personnel.")""")
+                    db.commit()
                     close_door(2)
                     cursor.close()
                     uid = None
@@ -151,7 +153,7 @@ while True:
                         # auditing denied attempt to database
                         print('DOOR LOCKED: User is not an active personnel.')
                         cursor.execute(f"""INSERT INTO SJSU.AUDIT_ACCESS (TIMESTAMP, SERIAL_NUMBER, READER_NAME, USER_ID, DECISION, REASON) VALUES
-                                        ("{get_current_time_iso().split('.')[0] + 'Z'}", {serial_number}, "FRONT_DOOR", "{user_id}"", "0", "User is not an active personnel.")""")
+                                        ("{get_current_time_iso().split('.')[0] + 'Z'}", {serial_number}, "FRONT_DOOR", "{user_id}", 0, "OOR LOCKED: No UUID found in database.")""")
                         db.commit()
                         close_door(2)
                     # if the personnel's status is active...
