@@ -1,12 +1,6 @@
 ## Digital Card Mobile App
 The digital card mobile app can store a personnel's digital card information, scan the NFC reader, and grant access to a door. To activate a personnel's card, they must log into their account, use Face ID or a passcode to activate the card, and put their phone over the NFC reader.
 
-## Authors
-- Blake Huynh
-- Sean Mei
-- Ross Nikolai Montepalco
-- Ryan Nguyen
-
 ## Setup and Installation
 **Requirements:** Mac, iPhone, and Xcode IDE
 
