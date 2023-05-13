@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)"
-options: "17e78a6342a462eb12437e7e1614d667381b293d77cae9c3ec4764506d008083"
-build_start_time: [1681502326, 612992000]
-build_end_time: [1681502326, 641366000]
-inputs:
-  "/Users/blakehuynh/Documents/IOS App Test/NFCReader/NFCReaderUITests/NFCReaderUITests.swift": !private [1681338839, 641944927]
-  "/Users/blakehuynh/Documents/IOS App Test/NFCReader/NFCReaderUITests/NFCReaderUITestsLaunchTests.swift": !private [1681338839, 644102412]
