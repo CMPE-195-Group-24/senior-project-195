@@ -10,7 +10,9 @@ import CoreNFC
 import LocalAuthentication
 
 struct CardView: View {
-    @State var ID1 = "d865c1ba845b40a9af5e16ea28a63b58"
+    @State var ID1 = "c7604df629d74f7e9e27ab9730035e78"
+    @State var ID2 = "it does not work"
+    @State var ID3 = "939b50100cc144c987460c00f2904235"
     @State var writer = NFCReader()
     @State private var text = "Locked"
     @State var contentTitle = "Digital Cards"
@@ -19,14 +21,78 @@ struct CardView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack (){
-                Text("Identification Card 1")
+                Text("Ross's ID")
                     .font(.title3)
                     .frame(width: 325, height: 20, alignment: .topLeading)
                     .bold()
-                Text("Engineering Building Door")
+                Text("Front Door")
                     .frame(width: 325, height: 70, alignment: .topLeading)
                 Button(action: {
                     authenticate()
+                }) {
+                    Text("Activate Card")
+                        .foregroundColor(Color.white)
+                }
+                .frame(width: 175, height: 40)
+                .background(Color.blue)
+                .cornerRadius(10)
+            }
+            .border(3, Color.black)
+            .background() {
+                LinearGradient(
+                    colors: [Color.gray, Color.blue],
+                    startPoint: .topLeading, endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
+                .hueRotation(.degrees(animateGradient ? 40 : 0))
+                .onAppear {
+                    withAnimation(.easeInOut(duration: 6).repeatForever(autoreverses: true)) {
+                        animateGradient.toggle()
+                    }
+                }
+                .opacity(0.5)
+            }
+            
+            VStack (){
+                Text("Invalid ID")
+                    .font(.title3)
+                    .frame(width: 325, height: 20, alignment: .topLeading)
+                    .bold()
+                Text("Wrong Door")
+                    .frame(width: 325, height: 70, alignment: .topLeading)
+                Button(action: {
+                    authenticate2()
+                }) {
+                    Text("Activate Card")
+                        .foregroundColor(Color.white)
+                }
+                .frame(width: 175, height: 40)
+                .background(Color.blue)
+                .cornerRadius(10)
+            }
+            .border(3, Color.black)
+            .background() {
+                LinearGradient(
+                    colors: [Color.gray, Color.blue],
+                    startPoint: .topLeading, endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
+                .hueRotation(.degrees(animateGradient ? 40 : 0))
+                .onAppear {
+                    withAnimation(.easeInOut(duration: 6).repeatForever(autoreverses: true)) {
+                        animateGradient.toggle()
+                    }
+                }
+                .opacity(0.5)
+            }
+            
+            VStack (){
+                Text("Sean's ID")
+                    .font(.title3)
+                    .frame(width: 325, height: 20, alignment: .topLeading)
+                    .bold()
+                Text("Front Door")
+                    .frame(width: 325, height: 70, alignment: .topLeading)
+                Button(action: {
+                    authenticate3()
                 }) {
                     Text("Activate Card")
                         .foregroundColor(Color.white)
@@ -65,6 +131,44 @@ struct CardView: View {
                 
                 if success {
                     writer.scanner(thedata: ID1)
+                }
+                else {
+                    text = "ERROR: Unable to authenticate user"
+                }
+            }
+        }
+    }
+    
+    func authenticate2() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if
+            context.canEvaluatePolicy( .deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To authenticate user to use ID") {
+                success, authenticationError in
+                
+                if success {
+                    writer.scanner(thedata: ID2)
+                }
+                else {
+                    text = "ERROR: Unable to authenticate user"
+                }
+            }
+        }
+    }
+    
+    func authenticate3() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if
+            context.canEvaluatePolicy( .deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To authenticate user to use ID") {
+                success, authenticationError in
+                
+                if success {
+                    writer.scanner(thedata: ID3)
                 }
                 else {
                     text = "ERROR: Unable to authenticate user"
