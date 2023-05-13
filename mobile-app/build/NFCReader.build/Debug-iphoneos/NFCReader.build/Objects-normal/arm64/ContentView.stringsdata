@@ -1,0 +1,20 @@
+{
+  "source": "/Users/blakehuynh/Documents/IOS App Test/NFCReader/NFCReader/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Activate NFC Card"
+      },
+      {
+        "comment": "",
+        "key": "ID Cards"
+      },
+      {
+        "comment": "",
+        "key": "Account Page"
+      }
+    ]
+  },
+  "version": 1
+}

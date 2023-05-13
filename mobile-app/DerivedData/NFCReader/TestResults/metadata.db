@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FormatVersion</key>
+	<integer>1</integer>
+	<key>Store</key>
+	<dict>
+		<key>NFCReaderTests</key>
+		<dict>
+			<key>NFCReaderTests</key>
+			<dict>
+				<key>testExample</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.00064098834991455078</real>
+				</dict>
+				<key>testPerformanceExample</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.36212301254272461</real>
+				</dict>
+			</dict>
+		</dict>
+		<key>NFCReaderUITests</key>
+		<dict>
+			<key>NFCReaderUITests</key>
+			<dict>
+				<key>testExample</key>
+				<dict>
+					<key>mrnet</key>
+					<real>2.8273680210113525</real>
+				</dict>
+				<key>testLaunchPerformance</key>
+				<dict>
+					<key>mrnet</key>
+					<real>79.258295059204102</real>
+				</dict>
+			</dict>
+			<key>NFCReaderUITestsLaunchTests</key>
+			<dict>
+				<key>testLaunch</key>
+				<dict>
+					<key>mrnet</key>
+					<real>5.8302040100097656</real>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

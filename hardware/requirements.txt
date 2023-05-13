@@ -1,0 +1,5 @@
+RPi.GPIO
+gpiozero
+mysql.connector
+datetime
+pytz

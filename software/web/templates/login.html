@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Log In {% endblock %}
+
+{% block content %}
+<head>
+    <title>Log In</title>
+    <link rel="shortcut icon" type="image/png" href="static\pictures\SUS-Logo-Fav4.png">
+</head>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="flash-notif" id="timerNoDisplay">{{msg}}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<form action="#" method="post" style="text-align: center">
+    <p>Email<br/><input class="form-control form-control-sm" style="width: 25%;" type="email" name="email" placeholder="Email" value="{{email if email}}"></p>
+    <p>Password<br/><input class="form-control form-control-sm" style="width: 25%;" type="password" name="password" placeholder="Password" value="{{password if password}}"></p>
+    <p><button class="btn btn-success" type="submit">Log In</button></p>
+</form>
+    <center><p><a href="signup"><button class="btn btn-primary" type="submit">Sign Up</button></a></p></center>
+{% endblock %}

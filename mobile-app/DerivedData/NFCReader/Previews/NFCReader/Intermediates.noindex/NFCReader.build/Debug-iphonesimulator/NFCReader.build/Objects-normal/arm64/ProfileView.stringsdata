@@ -1,0 +1,20 @@
+{
+  "source": "/Users/blakehuynh/Documents/IOS App Test/NFCReader/NFCReader/ProfileView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "My Profile"
+      },
+      {
+        "comment": "",
+        "key": "Logout"
+      },
+      {
+        "comment": "",
+        "key": "Delete Account"
+      }
+    ]
+  },
+  "version": 1
+}

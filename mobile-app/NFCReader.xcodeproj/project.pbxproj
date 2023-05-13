@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0316C62429E7695500DFE10B /* NFCReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316C62329E7695500DFE10B /* NFCReaderApp.swift */; };
+		0316C62629E7695500DFE10B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316C62529E7695500DFE10B /* ContentView.swift */; };
+		0316C62829E7695700DFE10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0316C62729E7695700DFE10B /* Assets.xcassets */; };
+		0316C62B29E7695700DFE10B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0316C62A29E7695700DFE10B /* Preview Assets.xcassets */; };
+		0316C63529E7695700DFE10B /* NFCReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316C63429E7695700DFE10B /* NFCReaderTests.swift */; };
+		0316C63F29E7695700DFE10B /* NFCReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316C63E29E7695700DFE10B /* NFCReaderUITests.swift */; };
+		0316C64129E7695700DFE10B /* NFCReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316C64029E7695700DFE10B /* NFCReaderUITestsLaunchTests.swift */; };
+		0376828029F1E6E3006406D4 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376827F29F1E6E3006406D4 /* helper.swift */; };
+		0376828229F1E6FA006406D4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376828129F1E6FA006406D4 /* ProfileView.swift */; };
+		915AE5D429FF3EB40054EFBC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AE5D329FF3EB40054EFBC /* CardView.swift */; };
+		915AE5D629FF3FC80054EFBC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AE5D529FF3FC80054EFBC /* LoginView.swift */; };
+		915AE5DA29FF47A10054EFBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 915AE5D929FF47A10054EFBC /* GoogleService-Info.plist */; };
+		915AE5DB29FF47A10054EFBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 915AE5D929FF47A10054EFBC /* GoogleService-Info.plist */; };
+		915AE5DC29FF47A10054EFBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 915AE5D929FF47A10054EFBC /* GoogleService-Info.plist */; };
+		915AE5DF29FF48170054EFBC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 915AE5DE29FF48170054EFBC /* FirebaseAnalytics */; };
+		915AE5E129FF48170054EFBC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 915AE5E029FF48170054EFBC /* FirebaseAuth */; };
+		915AE5E329FF48170054EFBC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 915AE5E229FF48170054EFBC /* FirebaseFirestore */; };
+		91E102122A0AE8ED0058E7C4 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E102112A0AE8EC0058E7C4 /* UserView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0316C63129E7695700DFE10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0316C61829E7695500DFE10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0316C61F29E7695500DFE10B;
+			remoteInfo = NFCReader;
+		};
+		0316C63B29E7695700DFE10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0316C61829E7695500DFE10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0316C61F29E7695500DFE10B;
+			remoteInfo = NFCReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0316C62029E7695500DFE10B /* NFCReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0316C62329E7695500DFE10B /* NFCReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderApp.swift; sourceTree = "<group>"; };
+		0316C62529E7695500DFE10B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0316C62729E7695700DFE10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0316C62A29E7695700DFE10B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0316C63029E7695700DFE10B /* NFCReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0316C63429E7695700DFE10B /* NFCReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderTests.swift; sourceTree = "<group>"; };
+		0316C63A29E7695700DFE10B /* NFCReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0316C63E29E7695700DFE10B /* NFCReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderUITests.swift; sourceTree = "<group>"; };
+		0316C64029E7695700DFE10B /* NFCReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		032E142029E9D85A00C11CD6 /* NFCReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCReader.entitlements; sourceTree = "<group>"; };
+		0376827F29F1E6E3006406D4 /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		0376828129F1E6FA006406D4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		915AE5D329FF3EB40054EFBC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		915AE5D529FF3FC80054EFBC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		915AE5D929FF47A10054EFBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91E102112A0AE8EC0058E7C4 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0316C61D29E7695500DFE10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915AE5DF29FF48170054EFBC /* FirebaseAnalytics in Frameworks */,
+				915AE5E129FF48170054EFBC /* FirebaseAuth in Frameworks */,
+				915AE5E329FF48170054EFBC /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0316C62D29E7695700DFE10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0316C63729E7695700DFE10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0316C61729E7695500DFE10B = {
+			isa = PBXGroup;
+			children = (
+				0316C62229E7695500DFE10B /* NFCReader */,
+				0316C63329E7695700DFE10B /* NFCReaderTests */,
+				0316C63D29E7695700DFE10B /* NFCReaderUITests */,
+				0316C62129E7695500DFE10B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0316C62129E7695500DFE10B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0316C62029E7695500DFE10B /* NFCReader.app */,
+				0316C63029E7695700DFE10B /* NFCReaderTests.xctest */,
+				0316C63A29E7695700DFE10B /* NFCReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0316C62229E7695500DFE10B /* NFCReader */ = {
+			isa = PBXGroup;
+			children = (
+				032E142029E9D85A00C11CD6 /* NFCReader.entitlements */,
+				915AE5D929FF47A10054EFBC /* GoogleService-Info.plist */,
+				915AE5D329FF3EB40054EFBC /* CardView.swift */,
+				0316C62529E7695500DFE10B /* ContentView.swift */,
+				0376827F29F1E6E3006406D4 /* helper.swift */,
+				915AE5D529FF3FC80054EFBC /* LoginView.swift */,
+				0316C62329E7695500DFE10B /* NFCReaderApp.swift */,
+				0376828129F1E6FA006406D4 /* ProfileView.swift */,
+				91E102112A0AE8EC0058E7C4 /* UserView.swift */,
+				0316C62729E7695700DFE10B /* Assets.xcassets */,
+				0316C62929E7695700DFE10B /* Preview Content */,
+			);
+			path = NFCReader;
+			sourceTree = "<group>";
+		};
+		0316C62929E7695700DFE10B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0316C62A29E7695700DFE10B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0316C63329E7695700DFE10B /* NFCReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				0316C63429E7695700DFE10B /* NFCReaderTests.swift */,
+			);
+			path = NFCReaderTests;
+			sourceTree = "<group>";
+		};
+		0316C63D29E7695700DFE10B /* NFCReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0316C63E29E7695700DFE10B /* NFCReaderUITests.swift */,
+				0316C64029E7695700DFE10B /* NFCReaderUITestsLaunchTests.swift */,
+			);
+			path = NFCReaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0316C61F29E7695500DFE10B /* NFCReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0316C64429E7695700DFE10B /* Build configuration list for PBXNativeTarget "NFCReader" */;
+			buildPhases = (
+				0316C61C29E7695500DFE10B /* Sources */,
+				0316C61D29E7695500DFE10B /* Frameworks */,
+				0316C61E29E7695500DFE10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NFCReader;
+			packageProductDependencies = (
+				915AE5DE29FF48170054EFBC /* FirebaseAnalytics */,
+				915AE5E029FF48170054EFBC /* FirebaseAuth */,
+				915AE5E229FF48170054EFBC /* FirebaseFirestore */,
+			);
+			productName = NFCReader;
+			productReference = 0316C62029E7695500DFE10B /* NFCReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0316C62F29E7695700DFE10B /* NFCReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0316C64729E7695700DFE10B /* Build configuration list for PBXNativeTarget "NFCReaderTests" */;
+			buildPhases = (
+				0316C62C29E7695700DFE10B /* Sources */,
+				0316C62D29E7695700DFE10B /* Frameworks */,
+				0316C62E29E7695700DFE10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0316C63229E7695700DFE10B /* PBXTargetDependency */,
+			);
+			name = NFCReaderTests;
+			productName = NFCReaderTests;
+			productReference = 0316C63029E7695700DFE10B /* NFCReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0316C63929E7695700DFE10B /* NFCReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0316C64A29E7695700DFE10B /* Build configuration list for PBXNativeTarget "NFCReaderUITests" */;
+			buildPhases = (
+				0316C63629E7695700DFE10B /* Sources */,
+				0316C63729E7695700DFE10B /* Frameworks */,
+				0316C63829E7695700DFE10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0316C63C29E7695700DFE10B /* PBXTargetDependency */,
+			);
+			name = NFCReaderUITests;
+			productName = NFCReaderUITests;
+			productReference = 0316C63A29E7695700DFE10B /* NFCReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0316C61829E7695500DFE10B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0316C61F29E7695500DFE10B = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					0316C62F29E7695700DFE10B = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 0316C61F29E7695500DFE10B;
+					};
+					0316C63929E7695700DFE10B = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 0316C61F29E7695500DFE10B;
+					};
+				};
+			};
+			buildConfigurationList = 0316C61B29E7695500DFE10B /* Build configuration list for PBXProject "NFCReader" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0316C61729E7695500DFE10B;
+			packageReferences = (
+				915AE5DD29FF48170054EFBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 0316C62129E7695500DFE10B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0316C61F29E7695500DFE10B /* NFCReader */,
+				0316C62F29E7695700DFE10B /* NFCReaderTests */,
+				0316C63929E7695700DFE10B /* NFCReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0316C61E29E7695500DFE10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0316C62B29E7695700DFE10B /* Preview Assets.xcassets in Resources */,
+				0316C62829E7695700DFE10B /* Assets.xcassets in Resources */,
+				915AE5DA29FF47A10054EFBC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0316C62E29E7695700DFE10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915AE5DB29FF47A10054EFBC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0316C63829E7695700DFE10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915AE5DC29FF47A10054EFBC /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0316C61C29E7695500DFE10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915AE5D629FF3FC80054EFBC /* LoginView.swift in Sources */,
+				0376828229F1E6FA006406D4 /* ProfileView.swift in Sources */,
+				0376828029F1E6E3006406D4 /* helper.swift in Sources */,
+				0316C62629E7695500DFE10B /* ContentView.swift in Sources */,
+				0316C62429E7695500DFE10B /* NFCReaderApp.swift in Sources */,
+				915AE5D429FF3EB40054EFBC /* CardView.swift in Sources */,
+				91E102122A0AE8ED0058E7C4 /* UserView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0316C62C29E7695700DFE10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0316C63529E7695700DFE10B /* NFCReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0316C63629E7695700DFE10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0316C63F29E7695700DFE10B /* NFCReaderUITests.swift in Sources */,
+				0316C64129E7695700DFE10B /* NFCReaderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0316C63229E7695700DFE10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0316C61F29E7695500DFE10B /* NFCReader */;
+			targetProxy = 0316C63129E7695700DFE10B /* PBXContainerItemProxy */;
+		};
+		0316C63C29E7695700DFE10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0316C61F29E7695500DFE10B /* NFCReader */;
+			targetProxy = 0316C63B29E7695700DFE10B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0316C64229E7695700DFE10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0316C64329E7695700DFE10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0316C64529E7695700DFE10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFCReader/NFCReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NFCReader/Preview Content\"";
+				DEVELOPMENT_TEAM = JP27SMK656;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "We need this to access the NFC Functionality";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to unlock ID";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Group24.NFCReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0316C64629E7695700DFE10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFCReader/NFCReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NFCReader/Preview Content\"";
+				DEVELOPMENT_TEAM = JP27SMK656;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "We need this to access the NFC Functionality";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to unlock ID";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Group24.NFCReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0316C64829E7695700DFE10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JP27SMK656;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SJSU.NFCReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NFCReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NFCReader";
+			};
+			name = Debug;
+		};
+		0316C64929E7695700DFE10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JP27SMK656;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SJSU.NFCReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NFCReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NFCReader";
+			};
+			name = Release;
+		};
+		0316C64B29E7695700DFE10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JP27SMK656;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SJSU.NFCReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NFCReader;
+			};
+			name = Debug;
+		};
+		0316C64C29E7695700DFE10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JP27SMK656;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SJSU.NFCReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NFCReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0316C61B29E7695500DFE10B /* Build configuration list for PBXProject "NFCReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0316C64229E7695700DFE10B /* Debug */,
+				0316C64329E7695700DFE10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0316C64429E7695700DFE10B /* Build configuration list for PBXNativeTarget "NFCReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0316C64529E7695700DFE10B /* Debug */,
+				0316C64629E7695700DFE10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0316C64729E7695700DFE10B /* Build configuration list for PBXNativeTarget "NFCReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0316C64829E7695700DFE10B /* Debug */,
+				0316C64929E7695700DFE10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0316C64A29E7695700DFE10B /* Build configuration list for PBXNativeTarget "NFCReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0316C64B29E7695700DFE10B /* Debug */,
+				0316C64C29E7695700DFE10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		915AE5DD29FF48170054EFBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		915AE5DE29FF48170054EFBC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915AE5DD29FF48170054EFBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		915AE5E029FF48170054EFBC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915AE5DD29FF48170054EFBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		915AE5E229FF48170054EFBC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915AE5DD29FF48170054EFBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0316C61829E7695500DFE10B /* Project object */;
+}
