@@ -6,6 +6,24 @@ The website interface is created to allow administrators in an oragnization and/
 
 ---
 
+##### Content
+Folders:
+* static
+	* css &rarr; CSS files for website
+	* pictures &rarr; Contains pictures used in the website
+* template &rarr; Contains all HTML pages for the website
+
+Files:
+* auxiliary_functions.py &rarr; contains Support functions (blocks of code to simply as a function call for redundant calls)
+* database_config.yaml &rarr; contains information of the specific database the web interface will utilize from AWS RDS
+* database_functions.py &rarr; contains support functions for database interaction from AWS RDS
+* webapp.wsgi &rarr; Web server gateway interface configuration file for Web Server on AWS EC2
+* web_main.py &rarr; contains the code that frames the website (main file that brings all files together to run as a whole)
+* requirements.txt &rarr; contains all the python packages to install via CLI.
+* \_\_init\_\_.py &rarr; File to provide path for initalizing website interface (not initalizing virtual host; essentially providing the path for website interface upon enabling virtual host)
+
+---
+
 ##### How to Host the Website Interface on a Web Server
 Source: https://youtu.be/YFBRVJPhDGY (by [Tech With Tim](https://www.youtube.com/@TechWithTim))
 
@@ -92,13 +110,15 @@ In "/etc/apache2/sites-available/webApp.conf":
 ```
 *Press "Esc" and type ":x" and press enter to save.*
 
-11. Enable Virtual Host
+11. Install the required Python packages using the following command: `pip install --pre -r requirements.txt`
+
+12. Enable Virtual Host
 ```
 sudo a2ensite /var/lib/webApp
 systemctl reload apache2
 ```
 
-12. Create .wsgi file
+13. Create .wsgi file
 ```
 sudo vi webapp.wsgi
 ```
@@ -116,7 +136,7 @@ application.secret_key = 'Add your secret key'
 ```
 *Press "Esc" and type ":x" and press enter to save.*
 
-13. Restart and reload apache
+14. Restart and reload apache
 ```
 sudo service apache2 restart
 sudo service reload apache2
